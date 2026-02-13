@@ -78,5 +78,8 @@ logs/
 # ── Legacy backup ──────────────────────────────────────────────────────────
 _legacy/
 
-# ── Garmin Connect (separate repo: github.com/Tobolove/python-garminconnect) ─
-python-garminconnect/
+# ── Garmin Connect subpackage build artifacts ────────────────────────────────
+python-garminconnect/__pycache__/
+python-garminconnect/.pytest_cache/
+python-garminconnect/*.egg-info/
+python-garminconnect/.git/
