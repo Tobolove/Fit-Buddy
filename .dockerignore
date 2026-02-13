@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.env
+__pycache__
+*.pyc
+.vscode
+.claude
+*.md
+.garminconnect
+_legacy
+.gitignore
+.env.example

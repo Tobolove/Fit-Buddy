@@ -1,0 +1,82 @@
+# =============================================================================
+# Fit Buddy - .gitignore
+# =============================================================================
+
+# ── Environment & Secrets (NEVER commit these) ──────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+credentials.json
+secrets.json
+garmin_tokens/
+.garth/
+.garminconnect/
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.Python
+.venv/
+venv/
+env/
+
+# ── Node.js ─────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Vite / Build Output ────────────────────────────────────────────────────
+dist/
+dist-ssr/
+.vite/
+
+# ── Database (local SQLite, not needed with Neon PostgreSQL) ────────────────
+instance/
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# ── Testing ─────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.hypothesis/
+
+# ── IDE / Editor ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ── OS Files ────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+nul
+
+# ── Logs ────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Claude Code ─────────────────────────────────────────────────────────────
+.claude/
+
+# ── Legacy backup ──────────────────────────────────────────────────────────
+_legacy/
+
+# ── Garmin Connect (separate repo: github.com/Tobolove/python-garminconnect) ─
+python-garminconnect/

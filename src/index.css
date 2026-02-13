@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0f;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1e1e2e; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2a2a3e; }
+
+/* Smooth scrolling for activity cards on mobile */
+.scrollbar-thin {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-card border border-surface-border rounded-xl p-5 transition-colors duration-200;
+  }
+  .card:hover {
+    @apply bg-surface-hover;
+  }
+  .metric-value {
+    @apply text-2xl font-semibold text-white tracking-tight font-mono;
+  }
+  .metric-label {
+    @apply text-xs text-white/40 font-medium uppercase tracking-widest;
+  }
+  .trend-up {
+    @apply text-emerald-400 text-xs font-medium;
+  }
+  .trend-down {
+    @apply text-red-400 text-xs font-medium;
+  }
+  .accent-line {
+    @apply h-px bg-gradient-to-r from-accent-cyan/60 via-accent-blue/40 to-transparent;
+  }
+}
