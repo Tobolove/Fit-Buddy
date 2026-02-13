@@ -31,13 +31,13 @@ from functools import wraps
 from flask import request, jsonify
 
 # The single authorized user
-AUTHORIZED_EMAIL = os.getenv('DASHBOARD_EMAIL', 'tobolove@icloud.com')
+AUTHORIZED_EMAIL = os.getenv('DASHBOARD_EMAIL', '')
 
 # Pre-computed bcrypt hash of the dashboard password
 AUTHORIZED_PASSWORD_HASH = os.getenv('DASHBOARD_PASSWORD_HASH', '')
 
 # JWT configuration
-JWT_SECRET = os.getenv('JWT_SECRET_KEY', 'fit-buddy-default-secret-change-in-production')
+JWT_SECRET = os.getenv('JWT_SECRET_KEY', '')
 JWT_ALGORITHM = 'HS256'
 JWT_EXPIRATION_HOURS = 24
 
