@@ -13,7 +13,6 @@ services:
       - .env
     environment:
       - FLASK_ENV=production
-      - DASHBOARD_PASSWORD_HASH=$$2b$$12$$L/yveBXPJor2IaX6f5nhDOfJPWQdtbNhaBvRFuS9aGTgScgqhzadS
     volumes:
       - garmin_tokens:/root/.garminconnect
     restart: unless-stopped
